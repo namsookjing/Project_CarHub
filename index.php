@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$sql = "SELECT * FROM your_table";
+$sql = "SELECT * FROM sellers";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
