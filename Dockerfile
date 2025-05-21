@@ -4,10 +4,8 @@ RUN docker-php-ext-install mysqli
 
 RUN a2enmod rewrite
 
-RUN echo "ServerName Project_CarHub" >> /etc/apache2/apache2.conf
-
 COPY . /var/www/html/
 
-EXPOSE 35987
+EXPOSE 80
 
 CMD ["apache2-foreground"]
