@@ -4,10 +4,11 @@ RUN docker-php-ext-install mysqli
 
 RUN a2enmod rewrite
 
-WORKDIR /var/www/html
+COPY apache-env.conf /etc/apache2/conf-available/env.conf
+RUN a2enconf env
 
-COPY . /var/www/html
+COPY . /var/www/html/
 
-RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
-EXPOSE 80
+CMD ["apache2-foreground"]
