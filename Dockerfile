@@ -8,4 +8,5 @@ RUN a2enmod rewrite
 
 EXPOSE 80
 
-RUN echo "ServerName https://projectcarhub-production.up.railway.app/" >> /etc/apache2/apache2.conf
+RUN echo "ServerName projectcarhub-production.up.railway.app" >> /etc/apache2/apache2.conf
+
