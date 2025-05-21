@@ -8,6 +8,6 @@ RUN echo "ServerName projectcarhub-production.up.railway.app" >> /etc/apache2/ap
 
 COPY . /var/www/html/
 
-EXPOSE 80
+EXPOSE 35987
 
 CMD ["apache2-foreground"]
